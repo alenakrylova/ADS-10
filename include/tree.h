@@ -6,11 +6,12 @@
 class Tree {
  private:
     struct Node {
-        std::vector<Node *> children;
+        std::vector<Node *> perems;
         char value;
     };
     Node *root;
     std::vector<std::vector<char>> permutations;
+
     void buildTree(Node *node, std::vector<char> values) {
         if (!node) {
             node = new Node;
@@ -55,5 +56,4 @@ class Tree {
         return permutations[index];
     }
 };
-
 #endif  // INCLUDE_TREE_H_
